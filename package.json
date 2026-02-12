@@ -1,0 +1,24 @@
+{
+  "name": "song-playlist-app",
+  "version": "1.0.0",
+  "description": "Song Playlist Dashboard - Full Stack Application",
+  "scripts": {
+    "start": "concurrently -n \"BACKEND,FRONTEND\" -c \"cyan,green\" \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd backend && .\\venv\\Scripts\\Activate.ps1 && python app.py || cd backend && venv\\Scripts\\activate.bat && python app.py",
+    "frontend": "cd frontend && npm start",
+    "install:all": "npm run install:frontend && npm install",
+    "install:frontend": "cd frontend && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "flask",
+    "react",
+    "playlist",
+    "dashboard"
+  ],
+  "author": "",
+  "license": "ISC"
+}
+
